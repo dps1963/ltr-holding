@@ -1,0 +1,24 @@
+{
+  "brand": "ltr",
+  "source": "../index.html header <nav> and <footer>, verbatim",
+  "nav": [
+    { "label": "How it works", "href": "#how" },
+    { "label": "Why the name", "href": "#pivot" },
+    { "label": "Get the app", "href": "#get", "style": "btn leaf", "note": "rendered as the leaf pill button, not a plain link" }
+  ],
+  "navNotes": "Plain nav links hide below 840px (nav a:not(.btn){display:none}); only the 'Get the app' button remains. No burger menu on this site.",
+  "footer": {
+    "left": [
+      { "label": "© 2026 Learn to Read, Read to Learn — we call him Mr. Swindell.", "type": "text" },
+      { "label": "A member of the BringMeSunshineGroup", "href": "https://BringMeSunshineGroup.com", "type": "group-link", "attrs": "target=_blank rel=noopener" }
+    ],
+    "right": [
+      { "label": "How it works", "href": "#how" },
+      { "label": "Why the name", "href": "#pivot" },
+      { "label": "Get the app", "href": "#get" }
+    ]
+  },
+  "otherPages": {
+    "faq": { "path": "/faq.html", "note": "Not linked from the index nav/footer; standalone FAQ page that also powers the AI support assistant (AIS plan)." }
+  }
+}

@@ -1,0 +1,169 @@
+/* ============================================================
+   Learn to Read, Read to Learn — brand tokens
+   Extracted verbatim from the live site mirror (../index.html).
+   The visual system is a child's exercise book: cream paper,
+   faint blue rules, a red margin line, pencil-gold highlights
+   and a growing green "leaf" accent.
+   Fonts, colours and recipes below are exactly as shipped.
+   ============================================================ */
+
+/* ---------- typography (as used on the live site) ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700;7..72,800&family=Atkinson+Hyperlegible:wght@400;700&family=Caveat:wght@500;600&display=swap');
+
+:root{
+  /* ----- core exercise-book palette (--ltr- prefix) ----- */
+  --ltr-paper:      #FFFDF6;  /* page background — cream exercise-book paper */
+  --ltr-rule:       #C7DCEC;  /* faint blue ruled lines, chip borders, dashed strikethrough */
+  --ltr-margin-red: #E4442E;  /* red margin line; accent for links, kickers, focus rings */
+  --ltr-ink:        #22303A;  /* body ink — near-black blue-grey; primary buttons, outlines */
+  --ltr-ink-soft:   #5A6B76;  /* softened ink for secondary text, nav, footer */
+  --ltr-leaf:       #3E7C4F;  /* growth green — primary CTA, "Read to learn", Mr. Swindell's jumper */
+  --ltr-leaf-light: #7FB08A;  /* light leaf — letter-leaf fills in the hero plant */
+  --ltr-pencil:     #F5C64C;  /* pencil gold — word highlight, underlines, Mr. Swindell's face */
+  --ltr-sky:        #EAF3F9;  /* pale sky blue — tablet screen, pivot band, feature dots */
+
+  /* ----- supporting literals used on the site ----- */
+  --ltr-leaf-dark:    #2F6640;               /* leaf button hover */
+  --ltr-leaf-tint:    #EDF6EE;               /* "after the pivot" pale green panel */
+  --ltr-card:         #FFFFFF;               /* card / chip / bubble surface */
+  --ltr-cheek:        #F0A28E;               /* Mr. Swindell's rosy cheeks */
+  --ltr-muted-grey:   #9AA7B0;               /* inactive controls (speaker off) */
+  --ltr-ink-on-dark:  #B9C6CE;               /* body copy on the dark ink CTA band */
+  --ltr-shadow-soft:  0 2px 12px rgba(34,48,58,.07);  /* card shadow */
+  --ltr-shadow-band:  0 2px 14px rgba(34,48,58,.08);  /* pivot band shadow */
+  --ltr-shadow-pill:  0 2px 8px  rgba(34,48,58,.15);  /* pivot pill shadow */
+
+  /* ----- ruled-paper metric ----- */
+  --ltr-line-h: 2.1rem;   /* the exercise-book line height (rule spacing) */
+
+  /* ----- typography ----- */
+  --ltr-font-serif: 'Literata', Georgia, serif;                 /* headings, wordmark, leaf letters */
+  --ltr-font-body:  'Atkinson Hyperlegible', sans-serif;        /* body — hyperlegible, child/dyslexia friendly */
+  --ltr-font-hand:  'Caveat', cursive;                          /* handwritten accents: eyebrow, tagline, notes */
+
+  /* ----- original aliases (verbatim variable names from index.html) ----- */
+  --paper:      var(--ltr-paper);
+  --rule:       var(--ltr-rule);
+  --margin-red: var(--ltr-margin-red);
+  --ink:        var(--ltr-ink);
+  --ink-soft:   var(--ltr-ink-soft);
+  --leaf:       var(--ltr-leaf);
+  --leaf-light: var(--ltr-leaf-light);
+  --pencil:     var(--ltr-pencil);
+  --sky:        var(--ltr-sky);
+  --line-h:     var(--ltr-line-h);
+}
+
+/* ============================================================
+   Ruled paper + red margin — the signature page background.
+   On the live site this is applied to <body> (rules) plus a
+   body::before fixed stripe (red margin). Reusable here as a
+   class: put .ltr-ruled-paper on the page container; it must
+   be position:relative (or the ::before margin line will
+   anchor to the viewport ancestor).
+   ============================================================ */
+.ltr-ruled-paper{
+  position:relative;
+  font-family:var(--ltr-font-body);
+  color:var(--ltr-ink);
+  background:var(--ltr-paper);
+  line-height:1.6;
+  background-image:linear-gradient(var(--ltr-rule) 1px, transparent 1px);
+  background-size:100% var(--ltr-line-h);
+  background-position:0 6px;
+}
+.ltr-ruled-paper::before{
+  content:"";position:absolute;top:0;bottom:0;
+  left:clamp(1.2rem,5vw,4.5rem);width:2px;
+  background:var(--ltr-margin-red);opacity:.55;z-index:0;pointer-events:none;
+}
+/* full-page variant — exactly the live-site behaviour (fixed margin line) */
+.ltr-ruled-paper--page::before{position:fixed}
+/* dark variant, as used on the "Get started" ink band */
+.ltr-ruled-paper--dark{
+  background:var(--ltr-ink);color:var(--ltr-paper);
+  background-image:linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px);
+  background-size:100% var(--ltr-line-h);
+}
+.ltr-ruled-paper--dark::before{content:none}
+
+/* content above the margin line, indented past it (live-site .page recipe) */
+.ltr-page{
+  position:relative;z-index:1;max-width:1100px;margin:0 auto;
+  padding:0 1.5rem 0 clamp(3rem,9vw,7rem);
+}
+
+/* ============================================================
+   Components — verbatim from index.html, renamed with .ltr-
+   ============================================================ */
+
+/* pill buttons: ink default, leaf primary CTA, ghost outline */
+.ltr-btn{
+  display:inline-block;background:var(--ltr-ink);color:var(--ltr-paper);
+  font-family:var(--ltr-font-body);font-weight:700;text-decoration:none;font-size:.95rem;
+  padding:.65rem 1.3rem;border-radius:999px;border:none;cursor:pointer;
+  transition:transform .15s ease, background .15s ease;
+}
+.ltr-btn:hover{background:var(--ltr-margin-red);transform:translateY(-1px)}
+.ltr-btn.ltr-btn--leaf{background:var(--ltr-leaf)}
+.ltr-btn.ltr-btn--leaf:hover{background:var(--ltr-leaf-dark)}
+.ltr-btn.ltr-btn--ghost{background:transparent;color:var(--ltr-ink);box-shadow:inset 0 0 0 2px var(--ltr-ink)}
+.ltr-btn.ltr-btn--ghost:hover{color:var(--ltr-margin-red);box-shadow:inset 0 0 0 2px var(--ltr-margin-red);background:transparent}
+/* ghost-on-dark (inside the ink band) */
+.ltr-ruled-paper--dark .ltr-btn--ghost{color:var(--ltr-paper);box-shadow:inset 0 0 0 2px var(--ltr-paper)}
+.ltr-ruled-paper--dark .ltr-btn--ghost:hover{color:var(--ltr-pencil);box-shadow:inset 0 0 0 2px var(--ltr-pencil)}
+
+/* focus ring — the site-wide accessible focus treatment */
+.ltr-btn:focus-visible, .ltr-focus:focus-visible{
+  outline:3px solid var(--ltr-margin-red);outline-offset:3px;border-radius:2px;
+}
+
+/* platform chip — small pill with icon */
+.ltr-chip{
+  display:inline-flex;align-items:center;gap:.4rem;
+  background:var(--ltr-card);border:1.5px solid var(--ltr-rule);border-radius:999px;
+  padding:.3rem .85rem;
+  font-family:var(--ltr-font-body);color:var(--ltr-ink-soft);font-size:.9rem;font-weight:700;
+}
+
+/* card ("strand") — white card, coloured pencil-line top border.
+   The live site cycles the top border pencil → margin-red → leaf. */
+.ltr-card-strand{
+  background:var(--ltr-card);border-radius:14px;padding:1.6rem 1.4rem;
+  box-shadow:var(--ltr-shadow-soft);border-top:5px solid var(--ltr-pencil);
+}
+.ltr-card-strand--red{border-top-color:var(--ltr-margin-red)}
+.ltr-card-strand--leaf{border-top-color:var(--ltr-leaf)}
+.ltr-card-strand h3{font-family:var(--ltr-font-serif);font-size:1.2rem;margin:.7rem 0 .45rem}
+.ltr-card-strand p{color:var(--ltr-ink-soft);font-size:.96rem}
+/* handwritten sign-off line inside a card */
+.ltr-card-strand .ltr-who{margin-top:.9rem;font-family:var(--ltr-font-hand);font-size:1.1rem;color:var(--ltr-leaf)}
+
+/* type accents */
+.ltr-kicker{font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ltr-margin-red);margin-bottom:.6rem}
+.ltr-eyebrow{font-family:var(--ltr-font-hand);font-size:1.35rem;color:var(--ltr-margin-red);transform:rotate(-1.5deg);display:inline-block;margin-bottom:.4rem}
+.ltr-tagline{font-family:var(--ltr-font-hand);font-size:clamp(1.5rem,2.6vw,1.9rem);font-weight:600;color:var(--ltr-margin-red);transform:rotate(-1.2deg)}
+.ltr-tagline strong{color:var(--ltr-leaf)}
+.ltr-h1{font-family:var(--ltr-font-serif);font-weight:800;font-size:clamp(2.4rem,5.6vw,4rem);line-height:1.08;letter-spacing:-.01em}
+.ltr-h2{font-family:var(--ltr-font-serif);font-weight:700;font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.15;max-width:32ch}
+
+/* pencil-gold underline highlight (under "Read to learn") */
+.ltr-highlight{display:inline-block;position:relative;z-index:0}
+.ltr-highlight::after{
+  content:"";position:absolute;left:0;right:0;bottom:-.18em;height:.22em;
+  background:var(--ltr-pencil);border-radius:2px;
+}
+/* dashed "practice" strikethrough (over "Learn to read") */
+.ltr-practice{display:inline-block;position:relative;color:var(--ltr-ink-soft);font-weight:600}
+.ltr-practice::after{content:"";position:absolute;left:0;right:0;top:55%;border-top:2px dashed var(--ltr-rule)}
+
+/* handwritten speech/pill bubble (Mr. Swindell's hello, pivot pill) */
+.ltr-hand-pill{
+  background:var(--ltr-paper);border:2px solid var(--ltr-ink);border-radius:999px;
+  padding:.45rem 1rem;font-family:var(--ltr-font-hand);font-size:1.2rem;font-weight:600;
+  white-space:nowrap;box-shadow:var(--ltr-shadow-pill);transform:rotate(-2deg);
+}
+
+/* nav link treatment */
+.ltr-nav-link{color:var(--ltr-ink-soft);text-decoration:none;font-size:.95rem;font-weight:700}
+.ltr-nav-link:hover,.ltr-nav-link:focus-visible{color:var(--ltr-margin-red)}

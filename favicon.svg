@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96">
+  <!-- Learn to Read, Read to Learn — favicon: the open book with reading arrows and sprout -->
+  <rect width="96" height="96" rx="20" fill="#FFFDF6"/>
+  <g transform="translate(0,8)">
+    <path d="M48 26 C36 16 16 16 10 23 V70 C16 63 36 63 48 73 C60 63 80 63 86 70 V23 C80 16 60 16 48 26 Z"
+          fill="#FFFFFF" stroke="#22303A" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M48 26 V73" stroke="#22303A" stroke-width="6" stroke-linecap="round"/>
+    <path d="M19 34 C27 30 37 31 41 34" fill="none" stroke="#E4442E" stroke-width="5" stroke-linecap="round"/>
+    <path d="M22 29 L19 34 L25 36" fill="none" stroke="#E4442E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M55 34 C59 31 69 30 77 34" fill="none" stroke="#3E7C4F" stroke-width="5" stroke-linecap="round"/>
+    <path d="M74 29 L77 34 L71 36" fill="none" stroke="#3E7C4F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M20 47 C28 44 38 45 42 48 M20 58 C28 55 38 56 42 59" fill="none" stroke="#C7DCEC" stroke-width="4.5" stroke-linecap="round"/>
+    <path d="M54 48 C58 45 68 44 76 47 M54 59 C58 56 68 55 76 58" fill="none" stroke="#C7DCEC" stroke-width="4.5" stroke-linecap="round"/>
+    <path d="M48 26 V10" stroke="#3E7C4F" stroke-width="5" stroke-linecap="round"/>
+    <path d="M48 15 C42 15 37 10 37 4 C43 4 48 8 48 15 Z" fill="#3E7C4F"/>
+    <path d="M48 12 C48 6 53 1 60 1 C60 8 54 12 48 12 Z" fill="#F5C64C" stroke="#3E7C4F" stroke-width="2"/>
+  </g>
+</svg>

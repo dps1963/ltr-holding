@@ -1,0 +1,51 @@
+{
+  "id": "ltr",
+  "name": "Learn to Read, Read to Learn",
+  "domain": "learntoreadreadtolearn.com",
+  "status": "extracted-from-live-site",
+  "extracted": "2026-07-31",
+  "source": "../index.html (verbatim live-site mirror)",
+  "note": "Supersedes the seed brand.json (BMSG Brands/brands/ltr/brand.json, primary #2196f0). The live site does not use that blue; its palette is the exercise-book system below.",
+  "colors": {
+    "paper":     { "hex": "#FFFDF6", "role": "page background — cream exercise-book paper; also text on dark/leaf surfaces" },
+    "rule":      { "hex": "#C7DCEC", "role": "faint blue ruled lines, chip borders, dashed strikethrough" },
+    "marginRed": { "hex": "#E4442E", "role": "red margin line; link/nav hover, kickers, focus outline, button hover" },
+    "ink":       { "hex": "#22303A", "role": "primary text, default button fill, illustration outlines, dark CTA band" },
+    "inkSoft":   { "hex": "#5A6B76", "role": "secondary text, nav links, footer" },
+    "leaf":      { "hex": "#3E7C4F", "role": "primary CTA (Get the app), growth/positive accent, Mr. Swindell's jumper" },
+    "leafLight": { "hex": "#7FB08A", "role": "light leaf fills (letter leaves in the hero plant)" },
+    "leafDark":  { "hex": "#2F6640", "role": "leaf button hover" },
+    "leafTint":  { "hex": "#EDF6EE", "role": "pale green panel (the 'reading to learn' pivot half)" },
+    "pencil":    { "hex": "#F5C64C", "role": "pencil-gold highlight — word highlight, underlines, Mr. Swindell's face, flower petals" },
+    "sky":       { "hex": "#EAF3F9", "role": "pale sky panel — tablet screen, pivot band, feature dots" },
+    "card":      { "hex": "#FFFFFF", "role": "card/chip/speech-bubble surface" },
+    "cheek":     { "hex": "#F0A28E", "role": "Mr. Swindell's rosy cheeks (illustration only)" },
+    "mutedGrey": { "hex": "#9AA7B0", "role": "inactive UI controls (speaker toggle off)" },
+    "inkOnDark": { "hex": "#B9C6CE", "role": "body copy on the dark ink band" }
+  },
+  "typography": {
+    "headings": { "family": "Literata", "stack": "'Literata', Georgia, serif", "weights": [400, 600, 700, 800], "use": "h1/h2/h3, wordmark, leaf letters, screen text" },
+    "body":     { "family": "Atkinson Hyperlegible", "stack": "'Atkinson Hyperlegible', sans-serif", "weights": [400, 700], "use": "all body copy, nav, buttons, chips" },
+    "hand":     { "family": "Caveat", "stack": "'Caveat', cursive", "weights": [500, 600], "use": "handwritten accents — eyebrow, tagline, notes, speech bubbles, pivot pill" },
+    "googleFontsImport": "https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700;7..72,800&family=Atkinson+Hyperlegible:wght@400;700&family=Caveat:wght@500;600&display=swap",
+    "childLegibility": "Atkinson Hyperlegible is chosen for child/dyslexia legibility; the site promises 'Hyperlegible type, adjustable size and spacing, and dyslexia-friendly options throughout'. Keep it for all reading-age surfaces (D18-D19 child-safety regime applies to this brand)."
+  },
+  "logos": {
+    "horizontal": "../logo-horizontal.svg",
+    "favicon": "../favicon.svg",
+    "icon512": "../icon-512.png",
+    "note": "The site embeds the horizontal logo inline (open-book mark + Literata wordmark with the pencil-gold underline beneath 'Learn') because an <img> cannot load Google Fonts; reuse the inline-SVG pattern where the wordmark must render in Literata."
+  },
+  "voice": {
+    "oneLiner": "Learn to read, then read to learn.",
+    "tagline": "…we call him Mr. Swindell.",
+    "strapline": "your reading teacher, in an app",
+    "mascot": {
+      "name": "Mr. Swindell",
+      "role": "companion, guide, mentor and teacher",
+      "description": "Friendly gold-faced figure with round glasses, a cosy green jumper, a red book under one arm and a warm smile; he walks across the page, waves, chuckles and speaks ('Hello, I'm Mr. Swindell, let us learn together')."
+    },
+    "themes": ["growth (plant/leaf metaphor: letters → words → knowledge)", "patience ('a teacher who never runs out of patience')", "encouragement (positive words: kind, brave, curious, wonder, dream)", "the pivot: learning to read → reading to learn"]
+  },
+  "tone": "Warm, patient, encouraging, evidence-based; written for children AND the adults helping them (whānau and teachers — en-NZ locale); never judging, celebrates every win; pedagogy first, technology in service of it. Strictest child-safety regime applies (D18-D19)."
+}
