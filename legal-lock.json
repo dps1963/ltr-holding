@@ -26,23 +26,25 @@
   "locales": [
     "en"
   ],
-  "pages": [
-    {
-      "path": "privacy.html",
-      "kind": "privacy",
-      "sha256": "5986e207a030ca6e2f2024146ae023e271fd15a248c9ea3d7ef7bcacbd35602a"
-    },
-    {
-      "path": "terms.html",
-      "kind": "terms",
-      "sha256": "89f011150201474b4ba534ff87c8629559627fd30cf9c7babf3ac4d0a2b89571"
-    }
-  ],
+  "pages": [],
   "linkSurfaces": [
     "faq.html",
     "index.html",
     "donate.html",
     "full-landing/index.html",
     "contact.html"
+  ],
+  "redirectConfig": "hosting/default.conf.template",
+  "folded": [
+    {
+      "path": "privacy.html",
+      "kind": "privacy",
+      "target": "https://bringmesunshinegroup.com/privacy.html"
+    },
+    {
+      "path": "terms.html",
+      "kind": "terms",
+      "target": "https://bringmesunshinegroup.com/terms.html"
+    }
   ]
 }
